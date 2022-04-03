@@ -4,13 +4,52 @@
 #include <cstdio>
 #include "employee.hpp"
 #include "database.hpp"
+#include <gtest/gtest.h>
 
 using namespace std;
 
 int menu();
+void interface();
 
 
-int main(){
+
+int main(int argc, const char * argv[]) {
+    interface();
+    return 0;
+//    testing::InitGoogleTest(&argc, (char**)argv);
+//       return RUN_ALL_TESTS();
+}
+
+
+TEST(testsearch, search){
+    Database database;
+    Employee emp;
+    string file = "base";
+    //my files are stored without extension ".txt"
+    
+    ifstream fin(file.c_str());
+    
+    database.load(fin);
+    fin.close();
+    string search_name = "polina";
+    EXPECT_EQ(1, database.search(search_name));
+}
+TEST(testsearchId, search_id){
+    Database database;
+    Employee emp;
+    //my files are stored without extension ".txt"
+    
+    string file = "base";
+    
+    ifstream fin(file.c_str());
+    
+    database.load(fin);
+    fin.close();
+    int searchId = 12;
+    EXPECT_EQ(1, database.search_id(searchId));
+}
+
+void interface(){
     Database database;
     Employee emp;
     string file;
@@ -89,16 +128,15 @@ int main(){
             cout << "File could not open!" << endl;
         }
         fout.close();
-        cout << "Thank you for using the ItalyHorse45 Database System! COME AGAIN SOON!" << endl;
+        cout << "Thank you for using! COME AGAIN SOON!" << endl;
     }
     else{
         cout << "File does not exist, creating new file!" << endl;
         ofstream new_file(file.c_str());
         new_file.close();
-        main();
+        interface();
     }
     
-    return 0;
 }
 int menu(){
     int choice = 0;

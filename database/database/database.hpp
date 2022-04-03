@@ -16,8 +16,10 @@ class Database
         void operator =(const Database& other);
         void resize();
         void add(const Employee& emp);
-        void search(std::string name);
-        void search_id(int id);
+//        void search(std::string name);
+        int search(std::string name);
+//        void search_id(int id);
+        int search_id(int id);
         void display_all();
         void remove(std::string name);
         void save(std::ostream& outs);

@@ -46,7 +46,7 @@ void Database::makeBigger(){
     data = tmp;
     capacity +=5;
 }
-void Database::search(std::string name){
+int Database::search(std::string name){
     
     int num_found = 0;
     
@@ -61,8 +61,9 @@ void Database::search(std::string name){
     if(num_found == 0){
         cout << "No Employee by that name" << endl;
     }
+    return num_found;
 }
-void Database::search_id(int id){
+int Database::search_id(int id){
     int num_found = 0;
     
     for(int i=0; i<used;i++){
@@ -75,6 +76,7 @@ void Database::search_id(int id){
     if(num_found == 0){
         cout << "No employee with that ID number!" << endl;
     }
+    return num_found;
 }
 void Database::add(const Employee& emp){
     if(used >= capacity){
