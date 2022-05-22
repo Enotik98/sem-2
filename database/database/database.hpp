@@ -3,26 +3,28 @@
 #include "employee.hpp"
 class Database
 {
-    private:
-        void makeBigger();
-        int capacity;
-        Employee *data;
-        int used;
+private:
+    void makeBigger();
+    int capacity;
+    Employee *data;
+    int used;
     
-    public:
-        Database();
-        ~Database();
-        Database(const Database& other);
-        void operator =(const Database& other);
-        void resize();
-        void add(const Employee& emp);
-//        void search(std::string name);
-        int search(std::string name);
-//        void search_id(int id);
-        int search_id(int id);
-        void display_all();
-        void remove(std::string name);
-        void save(std::ostream& outs);
-        void load(std::istream& ins);
+public:
+    Database();
+    ~Database();
+    Database(const Database& other);
+    void operator =(const Database& other);
+    void resize();
+    void add(const Employee& emp);
+//  void search(std::string name);
+    int search(std::string name);
+//  void search_id(int id);
+    int search_id(int id);
+    void display_all();
+    void remove(std::string name);
+    void save(std::ostream& outs);
+    void load(std::istream& ins);
+    void sort_by_name();
+    void sort_by_salary();
 };
 #endif

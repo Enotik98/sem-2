@@ -116,4 +116,41 @@ void Database::load(std::istream& ins){
         used++;
     }
 }
-
+void Database::sort_by_name()
+{
+    bool done = false;
+    Employee tmp;
+    while(!done)
+    {
+        done = true;
+        for(int i=0;i<used-1;i++)
+        {
+            if(data[i].get_name() > data[i+1].get_name())
+            {
+                done = false;
+                tmp = data[i];
+                data[i] = data[i+1];
+                data[i+1] = tmp;
+            }
+        }
+    }
+}
+void Database::sort_by_salary()
+{
+    bool done = false;
+    Employee tmp;
+    while(!done)
+    {
+        done = true;
+        for(int i=0;i<used-1;i++)
+        {
+            if(data[i].get_salary() < data[i+1].get_salary())
+            {
+                done = false;
+                tmp = data[i];
+                data[i] = data[i+1];
+                data[i+1] = tmp;
+            }
+        }
+    }
+}

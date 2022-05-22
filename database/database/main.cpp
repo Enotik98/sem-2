@@ -110,6 +110,18 @@ void interface(){
                     break;
                 }
                 case 6:{
+                    database.sort_by_name();
+                    cout << "Employees sorted by first name." << endl;
+                    database.display_all();
+                    break;
+                }
+                case 7:{
+                    database.sort_by_salary();
+                    cout << "Employees sorted by salary." << endl;
+                    database.display_all();
+                    break;
+                }
+                case 8:{
                     break;
                 }
                 default:{
@@ -146,7 +158,9 @@ int menu(){
     cout << "3. Searh for employee by ID." << endl;
     cout << "4. Display all employees." << endl;
     cout << "5. Remove employee from database." << endl;
-    cout << "6. Quit" << endl;
+    cout << "6. Sort by first name. " << endl;
+    cout << "7. Sort by salary." << endl;
+    cout << "8. Quit" << endl;
     cin >> choice;
     
     return choice;
