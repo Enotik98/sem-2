@@ -1,0 +1,36 @@
+\hypertarget{database_8hpp_source}{}\doxysection{database.\+hpp}
+\label{database_8hpp_source}\index{/Users/imac/Desktop/прога/sem-\/2/sem-\/2/database/database/database.hpp@{/Users/imac/Desktop/прога/sem-\/2/sem-\/2/database/database/database.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef DATABASE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define DATABASE\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}employee.hpp"{}}}
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_database}{Database}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9 \textcolor{keyword}{private}:}
+\DoxyCodeLine{11     \textcolor{keywordtype}{void} makeBigger();}
+\DoxyCodeLine{12     \textcolor{keywordtype}{int} capacity;}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_employee}{Employee}} *data;}
+\DoxyCodeLine{15     \textcolor{keywordtype}{int} used;}
+\DoxyCodeLine{16     }
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_database_a4703c80e6969d33565ea340f768fdadf}{Database}}();}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_database_a84d399a2ad58d69daab9b05330e1316d}{\string~Database}}();}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_database_a4703c80e6969d33565ea340f768fdadf}{Database}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_database}{Database}}\& other);}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_database_a7dc7f6d127dabe2bd139d75548062990}{resize}}();}
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_database_a0e2d35246aaa9d2fb1cbba65ddff322c}{add}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_employee}{Employee}}\& emp);}
+\DoxyCodeLine{30 \textcolor{comment}{//  void search(std::string name);}}
+\DoxyCodeLine{32 \textcolor{comment}{}    \textcolor{keywordtype}{int} \mbox{\hyperlink{class_database_a14ce6107c81e6869b7cf3d35801e0e84}{search}}(std::string name);}
+\DoxyCodeLine{33 \textcolor{comment}{//  void search\_id(int id);}}
+\DoxyCodeLine{35 \textcolor{comment}{}    \textcolor{keywordtype}{int} \mbox{\hyperlink{class_database_a19529f3baf76df4bb2ff3635f33c3b88}{search\_id}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_database_ad4e57214aea3aa9d95c2a9d318420ea1}{display\_all}}();}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_database_a856dcedb9ad4013f8bb54a8188045d7f}{remove}}(std::string name);}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_database_a6c8eb3a8f46c2a5b55f6750ef13ed6b4}{save}}(std::ostream\& outs);}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_database_aba15550171ade8016879031d0e29326d}{load}}(std::istream\& ins);}
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_database_aeafd00c6c9d0bd845ef01a1c9b74d023}{sort\_by\_name}}();}
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_database_a735f688c6e704ca9117a51e45b3fc531}{sort\_by\_salary}}();}
+\DoxyCodeLine{48 \};}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

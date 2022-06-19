@@ -6,6 +6,7 @@
 #include "employee.hpp"
 using namespace std;
 
+
 Database::Database(){
     used = 0;
     capacity = 5;
@@ -21,19 +22,6 @@ Database::Database(const Database& other){
 
 Database::~Database(){
     delete[]data;
-}
-
-void Database::operator =(const Database& other){
-    if(&other == this){
-        return;
-    }
-    
-    delete[]data;
-    
-    capacity = other.capacity;
-    used = other.used;
-    data = new Employee[capacity];
-    copy(other.data,other.data+used,data);
 }
 
 void Database::makeBigger(){

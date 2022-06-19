@@ -1,0 +1,33 @@
+\hypertarget{employee_8hpp_source}{}\doxysection{employee.\+hpp}
+\label{employee_8hpp_source}\index{/Users/imac/Desktop/прога/sem-\/2/sem-\/2/database/database/employee.hpp@{/Users/imac/Desktop/прога/sem-\/2/sem-\/2/database/database/employee.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef EMPLOYEE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define EMPLOYEE\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_employee}{Employee}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     \textcolor{keyword}{private}:}
+\DoxyCodeLine{12         std::string name;}
+\DoxyCodeLine{14         std::string address;}
+\DoxyCodeLine{16         \textcolor{keywordtype}{int} id\_emp;}
+\DoxyCodeLine{18         \textcolor{keywordtype}{double} salary;}
+\DoxyCodeLine{20         \textcolor{keywordtype}{int} year\_started;}
+\DoxyCodeLine{21     \textcolor{keyword}{public}:}
+\DoxyCodeLine{23         \mbox{\hyperlink{class_employee_a003c7bd08c40924e381eb0750cbb906f}{Employee}}();}
+\DoxyCodeLine{25         \mbox{\hyperlink{class_employee_a003c7bd08c40924e381eb0750cbb906f}{Employee}}(std::string new\_name, std::string new\_address, \textcolor{keywordtype}{int} new\_id,\textcolor{keywordtype}{double} new\_salary, \textcolor{keywordtype}{int} new\_years\_worked);}
+\DoxyCodeLine{27         std::string \mbox{\hyperlink{class_employee_a3b9505925c556d5b06a216724907bc44}{get\_name}}()\textcolor{keyword}{ const}\{\textcolor{keywordflow}{return} name;\}}
+\DoxyCodeLine{29         std::string \mbox{\hyperlink{class_employee_a8ab43adcd39cabd0c6bdda518990e20b}{get\_address}}()\textcolor{keyword}{ const}\{\textcolor{keywordflow}{return} address;\}}
+\DoxyCodeLine{31         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_employee_a8dd89659e2f3a7563028cf9b473e6983}{get\_id\_emp}}()\textcolor{keyword}{ const}\{\textcolor{keywordflow}{return} id\_emp;\}}
+\DoxyCodeLine{33         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_employee_a23ae4a6239fb04aed228df0d19a47199}{get\_salary}}()\textcolor{keyword}{ const}\{\textcolor{keywordflow}{return} salary;\}}
+\DoxyCodeLine{35         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_employee_a52e54e20a8f04ee3c77a7fb1f145678b}{get\_years\_started}}()\textcolor{keyword}{ const}\{\textcolor{keywordflow}{return} year\_started;\}}
+\DoxyCodeLine{37         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_employee_a0460ec88621cc6993f1b4f9f0618ba21}{output}}(std::ostream\& outs);}
+\DoxyCodeLine{39         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_employee_a7f25734c1adcbfaac0276f3dc254b8de}{input}}(std::istream\& ins);}
+\DoxyCodeLine{40     }
+\DoxyCodeLine{41 \};}
+\DoxyCodeLine{43 std::ostream\& operator <<(std::ostream\& outs, \mbox{\hyperlink{class_employee}{Employee}}\& tmp);}
+\DoxyCodeLine{45 std::istream\& operator >>(std::istream\& ins, \mbox{\hyperlink{class_employee}{Employee}}\& tmp);}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

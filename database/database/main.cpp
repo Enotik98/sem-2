@@ -6,6 +6,10 @@
 #include "database.hpp"
 #include <gtest/gtest.h>
 
+/**
+ @mainpage base
+ @brief data base in which employee data is a strored. By connection to the desered file, you can edit, read and search informatin in base
+ */
 using namespace std;
 
 int menu();
@@ -14,10 +18,10 @@ void interface();
 
 
 int main(int argc, const char * argv[]) {
-    interface();
-    return 0;
-//    testing::InitGoogleTest(&argc, (char**)argv);
-//       return RUN_ALL_TESTS();
+//    interface();
+//    return 0;
+    testing::InitGoogleTest(&argc, (char**)argv);
+       return RUN_ALL_TESTS();
 }
 
 
@@ -64,7 +68,7 @@ void interface(){
         fin.close();
         int choice = 0;
         
-        while(choice != 6){
+        while(choice != 8){
             choice = menu();
             switch (choice){
                 case 1:{
